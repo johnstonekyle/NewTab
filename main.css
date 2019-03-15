@@ -39,7 +39,3 @@ h1 {
 .inner_remaining {
   flex-grow : 1;
 }
-
-#icon {
-  font-size: 50pt;
-}
