@@ -49,12 +49,23 @@ var icons = [
     "watermelon"
 ];
 
+var colors = [
+    "#2e4160",
+    "#343a40"
+]
+
+function randomBackground(){
+    var rng = Math.round(Math.random()*(colors.length-1));
+    var color = colors[rng];
+    document.getElementById("body").style.backgroundColor = color;
+}
+
 function generateMessage(){
     var hr = (new Date()).getHours();
     var text;
     if (hr >= 5 && hr <= 11){
         text = 'Good Morning';
-    } else if (hr >= 12 && hr <= 6){
+    } else if (hr >= 12 && hr <= 18){
         text = 'Good Afternoon';
     } else {
         text = 'Good Evening';
@@ -70,3 +81,4 @@ function randomIcon(){
 
 randomIcon();
 generateMessage();
+randomBackground();
